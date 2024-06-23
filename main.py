@@ -17,7 +17,7 @@ def get_result(playerPicked, enemyPicked):
         ["loss", "win", "draw"],
     ]
 
-    return matrix[playerPicked], [enemyPicked]
+    return matrix[playerPicked][enemyPicked]
 
 validMoves = ["rock", "paper", "scissors"]
 
@@ -32,7 +32,7 @@ playerMoveIndex = validMoves.index(playerMove)
 
 print("enemy picked: ", enemyMove)
 
-result = matrix[playerMoveIndex][enemyMoveIndex]
+result = get_result(playerMoveIndex, enemyMoveIndex)
 
 print('You', result)
 
